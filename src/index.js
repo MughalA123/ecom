@@ -51,7 +51,9 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/seller-products', sellerProductRoutes); // Seller product routes
 app.use('/api/faqs', faqRoutes); // FAQ routes
 app.use('/api/deposits', depositRoutes); // Deposit routes
-
+app.use('/api/test', (req, res) => {
+  res.send('This is a test endpoint!');
+});
 // Create HTTP server
 const server = createServer(app);
 
